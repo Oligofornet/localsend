@@ -1,6 +1,6 @@
 name: localsend_app
 description: An open source cross-platform alternative to AirDrop
-homepage: https://localsend.org/
+homepage: https://github.com/Oligofornet/localsend
 publish_to: "none"
 
 version: 1.17.0+58

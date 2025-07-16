@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=LocalSend
+Comment=An open source cross-platform alternative to AirDrop
+Exec=/mnt/persist/workspace/build_kylin_x86_64/localsend
+Icon=/mnt/persist/workspace/build_kylin_x86_64/data/flutter_assets/assets/img/logo-512.png
+Terminal=false
+Type=Application
+Categories=Network;FileTransfer;
+StartupWMClass=localsend_app

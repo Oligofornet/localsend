@@ -1,0 +1,11 @@
+#!/bin/bash
+# LocalSend Launcher Script for Kylin OS
+
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Set library path to include bundled libraries
+export LD_LIBRARY_PATH="$SCRIPT_DIR/lib:$LD_LIBRARY_PATH"
+
+# Launch LocalSend
+exec "$SCRIPT_DIR/localsend_app" "$@"
