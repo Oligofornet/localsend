@@ -28,12 +28,28 @@ rm -rf appimage-build
 
 mkdir AppDir
 cp -r build/linux/x64/release/bundle/* AppDir
+
+# Copy logo to AppDir
+mkdir -p AppDir/usr/share/icons/hicolor/32x32/apps
+cp app/assets/img/logo-32.png AppDir/usr/share/icons/hicolor/32x32/apps/localsend.png
+mkdir -p AppDir/usr/share/icons/hicolor/128x128/apps
+cp app/assets/img/logo-128.png AppDir/usr/share/icons/hicolor/128x128/apps/localsend.png
+mkdir -p AppDir/usr/share/icons/hicolor/256x256/apps
+cp app/assets/img/logo-256.png AppDir/usr/share/icons/hicolor/256x256/apps/localsend.png
+
+# Copy recipe and set version
+cp scripts/appimage/AppImageBuilder_x86_64.yml AppImageBuilder.yml
+
+# Get version from pubspec.yaml
+VERSION=$(sed -n 's/^version: \([0-9]*\.[0-9]*\.[0-9]*\).*/\1/p' app/pubspec.yaml)
+export VERSION
+
 appimage-builder
-sudo chmod +x LocalSend-latest-x86_64.AppImage
+sudo chmod +x LocalSend-*.AppImage
 
 rm -rf AppDir
 rm -rf appimage-build
 
 popd
 cd localsend
-cp /tmp/build/LocalSend-latest-x86_64.AppImage .
+cp /tmp/build/LocalSend-*.AppImage .

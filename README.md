@@ -56,6 +56,16 @@ It is recommended to download the app either from an app store or from a package
 
 Read more about [distribution channels][].
 
+### AppImage Usage
+
+AppImage is a portable application format for Linux that allows you to run LocalSend without installation:
+
+1. **Download** the AppImage file from [GitHub Releases][latest]
+2. **Make it executable**: `chmod +x LocalSend-*.AppImage`
+3. **Run directly**: `./LocalSend-*.AppImage`
+
+AppImage files are available for both x86_64 and ARM64 architectures.
+
 [windows store]: https://www.microsoft.com/store/apps/9NCB4Z0TZ6RR
 [app store]: https://apps.apple.com/us/app/localsend/id1661733229
 [play store]: https://play.google.com/store/apps/details?id=org.localsend.localsend_app
